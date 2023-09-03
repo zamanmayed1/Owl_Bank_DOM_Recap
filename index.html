@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OWL Bank - Save & Spend Safely.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://www.freeiconspng.com/thumbs/owl-icon/owl-icon-0.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="overflow-hidden ">
+    <!-- Login Page -->
+    <div id="loginpage"
+        class="bg-[url('./images/background.avif')] w-full min-h-[100vh] bg-cover bg-no-repeat flex items-center justify-center bg-glass">
+        <!-- Login Form -->
+        <div class="w-[450px] pb-2 bg-white rounded-md cs-shadow">
+            <div class="flex gap-2 my-4 items-center">
+                <img class="w-24 h-24 block" src="https://www.freeiconspng.com/thumbs/owl-icon/owl-icon-0.png" alt="">
+                <div>
+                    <h1 class="text-2xl ">Owl Bank</h1>
+                    <p>Save & Spend Money Safely!</p>
+                </div>
+            </div>
+
+            <form class="p-4 ">
+                <input id="email"
+                    class="w-full block p-2 mb-4  text-lg outline-none bg-transparent border text-blue-800 " type="text"
+                    placeholder="Account Email">
+                <input id="password"
+                    class="w-full block p-2 mb-4  text-lg outline-none bg-transparent border  text-blue-800"
+                    type="password" placeholder="Password">
+                <input id="submit"
+                    class="px-8 text-white hover:bg-green-500 duration-500 cursor-pointer py-3 bg-blue-500"
+                    type="submit" value="Log In">
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- Account Page -->
+    <div id="myaccount" class="w-full h-[100vh] bg-cover bg-no-repeat p-6 my-auto">
+        <div class="w-full p-4 max-w-7xl mx-auto">
+            <!-- Main Container -->
+            <div class="flex gap-2">
+                <!-- User Information -->
+                <div class="w-[350px]">
+                    <!-- Account info -->
+                    <div class="border rounded-sm p-4   flex flex-col items-center">
+                        <img class="w-32 h-32 rounded-full" src="./images/zaman.jpeg" alt="">
+                        <h1 class=" text-2xl">Kamruzzaman Mayed</h1>
+                        <h1 class=" text-lg">zamanmayed01@gmail.com</h1>
+                        <div class="flex gap-2 items-center">
+                            <label class="px-3 py-1 inline bg-green-500 rounded-md text-white text-sm">Fixed
+                                Account</label>
+                            <label class="px-3 py-1 inline bg-blue-500 rounded-md text-white text-sm">2015 -
+                                2025</label>
+                        </div>
+                    </div>
+                    <!-- Account Member info -->
+                    <div class="border mt-4 rounded-sm p-4  ">
+                        <h1 class="text-xl">About Zaman,</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus iste cupiditate sapiente
+                            nostrum impedit eveniet atque tempora ad, harum distinctio? Autem dicta possimus impedit
+                            quas nemo qui natus unde pariatur quisquam harum consectetur aut laborum nobis neque.</p>
+                    </div>
+                </div>
+                <!-- User Bank Details -->
+                <div class="border p-4 w-full relative" >
+                    <!-- Balance info -->
+                    <div class="grid grid-cols-3 gap-4 ">
+                        <div class="border p-2 bg-[#22d4ef] rounded-md text-white">
+                            <h2 class="text-2xl font-bold ">Balance</h2>
+                            <h2 class="text-5xl my-1 font-bold ">$ <span id="balance"></span></h2>
+                        </div>
+                        <div class="border p-2 bg-[#fd913c] rounded-md text-white">
+                            <h2 class="text-2xl font-bold ">Deposit <span class="text-sm">(Total)</span></h2>
+                            <h2 class="text-5xl my-1 font-bold ">$ <span id="depbalance"></span></h2>
+                        </div>
+                        <div class="border p-2 bg-[#22c45c] rounded-md text-white">
+                            <h2 class="text-2xl font-bold ">Withdraw <span class="text-sm">(Total)</span></h2>
+                            <h2 class="text-5xl my-1 font-bold ">$ <span id="withbalance"></span></h2>
+                        </div>
+                    </div>
+                    <!-- Deposit and Withdraw Forms -->
+                    <div class="mt-8 grid grid-cols-2 gap-4">
+                        <!-- Deposit Form -->
+                        <div class="bg-white rounded-lg border p-6">
+                            <h2 class="text-2xl font-semibold mb-4">Deposit</h2>
+                            <form>
+                                <div class="mb-4">
+                                    <label class="block text-gray-600 font-semibold" for="depositAmount">Amount to
+                                        Deposit</label>
+                                    <input class="w-full border border-gray-300 rounded-lg p-2" type="number"
+                                        id="depositAmount" placeholder="$" />
+                                </div>
+                                <div class="flex justify-end">
+                                    <button id="depbalbtn"
+                                        class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-md  focus:outline-none focus:ring focus:ring-blue-300"
+                                        type="submit">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Withdraw Form -->
+                        <div class="bg-white rounded-lg border p-6">
+                            <h2 class="text-2xl font-semibold mb-4">Withdraw</h2>
+                            <form>
+                                <div class="mb-4">
+                                    <label class="block text-gray-600 font-semibold" for="withdrawAmount">Amount to
+                                        Withdraw</label>
+                                    <input class="w-full border border-gray-300 rounded-lg p-2" type="number"
+                                        id="withdrawAmount" placeholder="$" />
+                                </div>
+                                <div class="flex justify-end">
+                                    <button id="withbalbtn"
+                                        class="bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded-md  focus:outline-none focus:ring focus:ring-red-300"
+                                        type="submit">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                        <button id="logout" class="absolute bottom-0 right-0 px-4 py-2 bg-red-600 text-white">Logout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <script src="./js/login.js"></script>
+    <script src="./js/logout.js"></script>
+    <script src="./js/balanceCalculation.js"></script>
+</body>
+
+</html>
